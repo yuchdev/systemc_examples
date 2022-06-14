@@ -14,9 +14,8 @@ We use SystemC version 2.3.4, which could be cloned directly from the Accellera 
 git clone --depth 1 --branch 2.3.4_pub_rev_20190614 https://github.com/accellera-official/systemc.git
 mkdir build-cmake
 cd build-cmake
-cmake .. -DCXXFLAGS="-std=c++17"
+cmake .. -DCMAKE_CXX_STANDARD=17 -DCMAKE_INSTALL_PREFIX="/usr/local"
 cmake --build .
-make
 touch ../docs/tlm/ChangeLog
 sudo make install
 ```

@@ -37,6 +37,7 @@ SET(_SYSTEMC_PATHS
   ${CONAN_LIB_DIRS_SYSTEMCVERIFICATION}
   ${CONAN_INCLUDE_DIRS_SYSTEMC-CCI}
   ${CONAN_LIB_DIRS_SYSTEMC-CCI}
+  /opt/systemc/include
   /usr/include/systemc
   /usr/lib
   /usr/lib-linux
