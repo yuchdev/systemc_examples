@@ -1,6 +1,6 @@
-# SystemC Tutorial Project
+# Introduction to SystemC: Tutorial Project
 
-## Intro
+## Preface
 
 Given exercises mostly were taken from the book of David Black "SystemC: From Ground Up" 2nd Edition.
 However, project includes instructions how to set up the SystemC working environment with manual build or using Conan,
