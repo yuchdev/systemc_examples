@@ -1,4 +1,9 @@
-# SystemC From Ground Up Exercises
+# "SystemC: From Ground Up" Exercises
+
+## Intro
+
+Tutorial exercises mostly taken from the book of David Black "SystemC: From Ground Up" 2nd Edition.
+It includes instructions how to set up the SystemC working environment with manual build or using Conan.
 
 ## Building SystemC from scratch
 

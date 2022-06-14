@@ -41,14 +41,13 @@ if (NOT DEFINED ENV{SYSTEMC_HOME})
     find_package(systemc-cci)
 
     add_subdirectory(src)
-    target_link_libraries(${PROJECT_NAME} systemc-cci::systemc-cci systemc-scv::systemc-scv SystemC::systemc)
+
 
 else ()
     find_package(SystemC REQUIRED)
     add_subdirectory(src)
     target_include_directories(${PROJECT_NAME} PUBLIC ${SystemC_INCLUDE_DIRS} ${SCV_INCLUDE_DIRS})
     target_link_directories(${PROJECT_NAME} PUBLIC ${SCV_LIBRARY_DIRS} ${SystemC_LIBRARY_DIRS})
-    target_link_libraries(${PROJECT_NAME} PUBLIC ${SCV_LIBRARIES} ${SystemC_LIBRARIES})
 endif ()
 
 # CTest is a testing tool that can be used to test your project.
