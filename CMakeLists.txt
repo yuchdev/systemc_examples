@@ -10,6 +10,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+# Whether we use manual build of SystemC or not
 if (NOT DEFINED ENV{SYSTEMC_HOME})
 
     find_program(CONAN_EXE NAMES conan REQUIRED)
@@ -42,8 +43,8 @@ if (NOT DEFINED ENV{SYSTEMC_HOME})
 
     add_subdirectory(src)
 
-
 else ()
+
     find_package(SystemC REQUIRED)
     add_subdirectory(src)
     target_include_directories(${PROJECT_NAME} PUBLIC ${SystemC_INCLUDE_DIRS} ${SCV_INCLUDE_DIRS})
