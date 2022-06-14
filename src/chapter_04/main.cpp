@@ -119,7 +119,29 @@ void rw_pipelined_transactor::write(const write_t *req) {
 
 inline void process(scv_smart_ptr<int> data) {}
 
-inline void test::main() {
+class test : public sc_module
+{
+public:
+    sc_port <rw_task_if> transactor;
+    SC_CTOR(test) {
+        SC_THREAD(main);
+    }
+
+    void main();
+};
+
+class write_constraint : virtual public scv_constraint_base
+{
+public:
+    scv_smart_ptr <rw_task_if::write_t> write;
+SCV_CONSTRAINT_CTOR(write_constraint) {
+        SCV_CONSTRAINT(write->addr() <= ram_size);
+        SCV_CONSTRAINT( write->addr() != write->data());
+    }
+};
+
+inline void test::main()
+{
     // simple sequential tests
     for (int i = 0; i < 3; i++) {
         rw_task_if::addr_t addr = i;

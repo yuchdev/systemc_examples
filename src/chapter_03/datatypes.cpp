@@ -1,5 +1,5 @@
-define  SC_INCLUDE_FX
-include <systemc>
+#define  SC_INCLUDE_FX
+#include <systemc>
 #include <string>
 #include <bitset>
 
