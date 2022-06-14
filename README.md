@@ -2,7 +2,18 @@
 
 ## Building SystemC from scratch
 
-TODO
+We use SystemC version 2.3.4, which could be cloned directly from the Accellera official repo
+
+```
+git clone --depth 1 --branch 2.3.4_pub_rev_20190614 https://github.com/accellera-official/systemc.git
+mkdir build-cmake
+cd build-cmake
+cmake .. -DCXXFLAGS="-std=c++17"
+cmake --build .
+make
+touch ../docs/tlm/ChangeLog
+sudo make install
+```
 
 ## Using conan
 Building the project from source is simple. 
