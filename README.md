@@ -45,13 +45,11 @@ bin/systemc_example
 
 If you would like to analyze the recording output further just download the latest release of 
 [SCViewer](https://github.com/Minres/SCViewer/releases) to open the transaction_example.txlog.
-```
 
 ## Notes
 
 Don't forget to add '-s compiler.libcxx=libstdc++11' to the conan call or changing compiler.libcxx,
 otherwise you might have run into GCC ABI incompatibility, or add
-
 ```
 compiler.libcxx=libstdc++11
 ```
