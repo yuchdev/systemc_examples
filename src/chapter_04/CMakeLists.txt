@@ -4,6 +4,11 @@ file(GLOB SOURCES *.cpp *.h *.txt)
 
 include_directories(
     ${CMAKE_SOURCE_DIR}
+    /opt/systemc/include
+)
+
+target_ling_directories(
+    /opt/systemc/lib
 )
 
 add_executable(${TARGET} ${SOURCES})
